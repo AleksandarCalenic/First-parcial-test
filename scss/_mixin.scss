@@ -1,0 +1,38 @@
+@mixin main {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        font-family: $tekst;
+    }
+
+    h1, h2, h3, p.logotekst {
+        font-family: $logo-naslovi;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: $Zelena-tamna;
+        text-transform: uppercase;
+    }
+
+    p.logotekst {
+        color: black;
+        text-transform: uppercase;
+    }
+}
+
+@mixin clearfix {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

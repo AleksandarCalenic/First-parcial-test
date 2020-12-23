@@ -1,0 +1,371 @@
+@import 'varijable';
+@import 'mixin';
+
+
+@include main;
+
+header {
+    width: 100%;
+    height: 10em;
+    @include clearfix();
+}
+
+nav {
+    width: 100%;
+    height: 2em;
+    background-color: $Zelena-tamna;
+    text-align: center;
+
+    ul {
+        width: 40%;
+        height: 2em;
+        margin: 0 30%;
+        float: left;
+
+        li {
+            list-style: none;
+            width: 16.6%;
+            height: 2em;
+            display: block;
+            float: left;
+
+            a{
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: 2em;
+                color: white;
+            }
+
+            a.none {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+div.header {
+    width: 100%;
+    height: 8em;
+    background-color: $Zelena-svetla;
+
+    div.logo {
+        float: left;
+        width: 25%;
+        height: 7em;
+
+        img {
+            width: 20%;
+            height: 65%;
+            margin: 5% 5%;
+            float: left;
+        }
+
+        p{
+            float: left;
+            margin: 8% 3%;
+            font-size: 2.5em;
+        }
+
+        span {
+            color: $Crvena;
+        }
+    }
+
+        div.login{
+        float: right;
+        width: 30%;
+        margin-right: 5%;
+        margin-top: 2%;
+
+        input, div {
+            float: right;
+        }
+
+        input {
+            width: 30%;
+            line-height: 2em;
+            margin-left: 1%;
+            border-radius: 5px;
+            background-color: $Zelena-tamna;
+            padding: 0 1%;
+            color: white;
+
+        }
+
+        input[type=button] {
+            width: 10%;
+            background-color: $Crvena;
+            color: white;
+            cursor: pointer;
+
+        }
+        }
+
+        div.input {
+            margin-top: 2%;
+
+            p {
+            display: inline-block;
+            color: $Zelena-tamna;
+        }
+
+            a{
+                color: $Crvena;
+            }
+        }   
+}
+
+section.first {
+    width: 100%;
+    height: 60em;
+    background-image: url(../slike/intro.jpg);
+    background-size: cover;
+    padding: 10% 0% 0%;
+
+
+    div {
+        width: 50%;
+        text-align: center;
+        margin: 0% 25% 2%;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+    
+    button {
+            display: inline-block;
+            width: 8%;
+            line-height: 3em;
+            margin: 0 46%;
+            background-color: $Zelena-tamna;
+            color: $Zelena;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+}
+
+section.second {
+    width: 100%;
+    background-color: $Zelena-svetlija;
+    text-align: center;
+    @include clearfix();
+
+    h2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    div.kolone {
+        float: left;
+        width: 30%;
+        margin-left: 3%;
+        cursor: pointer;
+
+    }
+
+    div.slike {
+        width: 50%;
+        height: 15em;
+        margin-left: 25%;
+ 
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover img{
+            width: 105%;
+            height: 105%;
+
+        }
+    }
+
+    p.obicna {
+        margin-top: 2%;
+        margin-bottom: 10%;
+    }
+    p.crvena {
+        color: $Crvena;
+        font-family: $logo-naslovi;
+        margin-top: 2%;
+    }
+}
+
+section.third {
+    width: 100%;
+    text-align: justify;
+    padding: 0 3%;
+    @include clearfix();
+
+    h2 {
+        margin: 5% 0 3%; 
+    }
+
+    span {
+        color: $Crvena;
+    }
+
+    button {
+        float: right;
+        background-color: $Crvena;
+        color: white;
+        padding: 0.5% 3%;
+        border-radius: 5px;
+        margin-bottom: 7%;
+        margin-top: 1%;
+        cursor: pointer;
+    }
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 5% 5%;
+    background-color: $Zelena-tamna;
+    @include clearfix();
+
+    form {
+        background-color: #7F7F7F7F;
+        width: 40%;
+        padding: 1% 3%;
+        float: left;
+
+        h2 {
+            margin-bottom: 4%;
+        }
+
+        input {
+            display: inline-block;
+            width: 49.5%;
+            line-height: 2em;
+            text-transform: uppercase;
+            padding: 0 1%;
+
+            &.subject {
+                width: 100%;
+                margin: 1% 0 3%;
+            }
+
+            &[type=button] {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            text-transform: uppercase;
+            padding: 1% 1%;
+        }
+    }
+
+    div.maps {
+        width: 25em;
+        height: 22em;
+        float: right;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and(max-width: 1550px) {
+    
+    nav {
+    
+        ul {
+            width: 70%;
+            margin: 0 15%;
+            text-align: center;
+
+            li {
+                width: 14.2%;
+    
+                a.none {
+                    visibility: visible;
+                    color: $Crvena;
+                }
+            }
+        }
+    }
+
+    div.header {
+    
+        div.logo {
+            float: none;
+            margin: 0 40%;   
+        }
+
+            div.login{
+            display: none;
+        }
+    }
+
+    }
+
+@media screen and(max-width: 1300px) {
+
+    header {
+        height: 14em;
+        @include clearfix;
+    }
+    
+    nav {
+        height: 14em;
+    
+        ul {
+            width: 100%;
+            height: 2em;
+            margin: 0;
+    
+            li {
+                width: 100%;
+                background-color: $Zelena-tamna;
+   
+                a.none {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    div.header {
+        display: none;
+    }
+
+    section.first {
+        display: none;
+    }
+
+    section.second {
+    
+        h2 {
+            margin-top: 1%;
+            margin-bottom: 3%;
+        }
+    
+        div.kolone {
+            width: 50%;
+            margin-left: 25%;
+        }
+    
+        div.slike {
+            width: 40%;
+            margin-left: 30%;
+        }
+    
+        p.obicna {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+    }
+
+    section.third {
+        display: none;
+    }    
+}
